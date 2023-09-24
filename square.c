@@ -1,23 +1,10 @@
 #include<stdio.h>
-#include<GL/glut.h>
-
-void display(void)
+int main()
 {
- glClear(GL_COLOR_BUFFER_BIT);
- glCOLOR3f(0.0,1.0,0.0);
- glBegin(GL_POLYGON);
-  glVertex3f(2.0,4.0,0.0);
-  glVertex3f(8.0,4.0,0.0);
-  glVertex3f(8.0,6.0,0.0);
-  glVertex3f(2.0,6.0,0.0);
-  glEnd();
-  glFlush();
-}
-
-int main(int argc,char **argv)
-{
- printf("Hello World\n");
- glutInit(&argc,argv);
- glutInitDisplayMode
-  (GLUT_SINGLE  GLUT_RGB  GLUT_DEPTH);
+    float number, square;
+    printf("Please Enter any integer Value : ");
+    scanf("%f", &number);
+    square = number * number;
+    printf("square of a given number %.2f is  =  %.2f", number, square);
+    return 0;
 }
